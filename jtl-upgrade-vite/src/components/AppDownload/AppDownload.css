@@ -1,0 +1,96 @@
+.app-download {
+  background: #23272a;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem 2.5rem 1rem;
+}
+.app-download h2 {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+.app-download p {
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+.app-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+.app-btn img {
+  height: 48px;
+  width: auto;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  background: #23272a;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.app-btn img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.app-download-banner {
+  background: #23272a;
+  color: #fff;
+  padding: 3rem 0 2.5rem 0;
+}
+.app-download-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.app-download-left {
+  flex: 1 1 300px;
+}
+.app-download-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #fff;
+}
+.app-download-desc {
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  color: #fff;
+}
+.app-download-right {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.app-badge {
+  height: 50px;
+  width: auto;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  background: #23272a;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin: 0.2rem 0;
+}
+.app-badge:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+@media (max-width: 900px) {
+  .app-download-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .app-download-right {
+    justify-content: flex-start;
+  }
+} 

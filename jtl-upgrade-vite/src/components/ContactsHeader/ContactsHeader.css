@@ -1,0 +1,27 @@
+.contacts-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #23272a;
+    color: #fff;
+    font-size: 14px;
+    padding: 0.4rem 0;
+    gap: 2.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    height: 35px;
+    width: 100%;
+  }
+  
+  .contact-link {
+    color: #fff !important;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .contact-link:hover {
+    color: #8dc63f !important;
+  }
