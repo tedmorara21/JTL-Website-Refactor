@@ -21,12 +21,12 @@ export default function Header() {
             <div className="header-right">
               <div className="header-links">
                 <ul>
-                  <li><a href='/home' className="active">Home</a></li>
+                  <li><a href='/' className="active">Home</a></li>
                   <li><a href='/about'>About</a></li>
-                  <li><a>Faiba Mobile</a></li>
-                  <li><a>Faiba Fixed</a></li>
-                  <li><a>Self Care</a></li>
-                  <li><a>Locate Us</a></li>
+                  <li><a href='/faiba-mobile'>Faiba Mobile</a></li>
+                  <li><a href='/faiba-fixed'>Faiba Fixed</a></li>
+                  <li><a href='/self-care'>Self Care</a></li>
+                  <li><a href='/locate-us'>Locate Us</a></li>
                 </ul>
               </div>
 

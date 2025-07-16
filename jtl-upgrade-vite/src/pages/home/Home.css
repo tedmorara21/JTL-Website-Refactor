@@ -1,0 +1,189 @@
+/* Hero styles */
+.hero-carousel {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+
+  /* border: solid 2px red;  */
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  overflow: hidden;
+  background: #fff;
+
+  /* border: solid 2px rgb(38, 0, 255);   */
+}
+
+.carousel-image {
+  width: 100%;
+  /* max-height: 400px;  */
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  /* cursor: pointer; */
+
+  /* border: solid 2px rgb(255, 0, 0); */
+}
+
+.arrow-left, .arrow-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  color: #fff; 
+  border: none;
+  background: none;  
+  width: 15%; 
+  /* height: 80%; */   
+  font-size: 1.5rem;  
+  cursor: pointer;
+  z-index: 2; 
+  /* display: flex; */
+  align-items: center; 
+  justify-content: center; 
+  /* transition: background 0.2s; */ 
+
+  margin-top: 5px;
+  margin-bottom: 7px;
+
+  /* border: solid 2px rgb(0, 255, 0); */
+} 
+
+.arrow-left {
+  left: 20px;
+}
+
+.arrow-right {
+  right: 20px; 
+}
+
+.arrow-left:hover, .arrow-right:hover {
+  background: rgba(35,39,42,0.7); 
+  color: #ffffff;
+  transition: background 0.2s;
+  /* border: solid 2px #8dc63f; */
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: 2px solid #fff;
+}
+
+.carousel-dot.active {
+  background: #8dc63f;
+  border: 2px solid #8dc63f;
+}
+
+/* Services styles */
+.services-row {
+  display: flex;
+  justify-content: space-between; 
+  margin: 1rem; 
+  gap: 1rem;
+  /* max-width: 1200px; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+
+  /* border: solid 2px red; */
+}
+
+.service-card {
+  flex: 1;
+  padding: 3.5rem 2rem 3.5rem 2rem;
+  border-radius: 5px; 
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: space-between; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+
+
+  /* border: solid 2px red; */
+}
+
+.service-card.dark {
+  background: #212529;
+  color: #fff;
+}
+
+.service-card.primary {
+  background: #74aa50;
+  color: #23272a;
+}
+
+.service-title {
+  font-size: 1.5rem; 
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.service-desc {
+  font-size: 1.15rem;
+  margin-bottom: 2.2rem;
+  font-weight: 400; 
+  display: block;
+
+  /* border: solid 2px red; */
+}
+
+.btn {
+  display: inline-block; 
+  width: 80%;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  padding: 1rem 2.5rem;
+  text-decoration: none; 
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #74aa50;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #6fa32d;
+  color: #fff;
+}
+
+.btn-dark {
+  background: #23272a;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: #111;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .services-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

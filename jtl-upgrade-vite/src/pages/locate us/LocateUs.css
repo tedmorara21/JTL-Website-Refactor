@@ -1,0 +1,108 @@
+/* Hero Section */
+.locate-hero {
+  background: #23272a;
+  color: #8dc63f;
+  text-align: center;
+  padding: 3rem 1rem 2.5rem 1rem;
+  margin-bottom: 2.5rem;
+}
+.locate-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* Tabs */
+.locate-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+.locate-tab {
+  background: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #8dc63f;
+  padding: 1rem 3.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border: 2px solid #fff;
+}
+.locate-tab.active {
+  background: #8dc63f;
+  color: #fff;
+  border: 2px solid #8dc63f;
+  cursor: default;
+}
+.locate-tab:disabled:not(.active) {
+  color: #8dc63f;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Section Titles */
+.locate-section-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #23272a;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+/* Cards Grid */
+.locate-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2.5rem auto;
+}
+.locate-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1.5px solid #e0e0e0;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 160px;
+  font-size: 1.08rem;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+.locate-card-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #23272a;
+  margin-bottom: 0.7rem;
+}
+.locate-card-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #23272a;
+  margin-bottom: 0.3rem;
+  word-break: break-word;
+}
+.locate-icon {
+  font-size: 1.1rem;
+  color: #8dc63f;
+}
+
+@media (max-width: 900px) {
+  .locate-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .locate-tabs {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
