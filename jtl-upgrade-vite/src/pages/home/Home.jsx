@@ -8,7 +8,6 @@ import Header from '../../components/Header/Header';
 import './Home.css';
 
 
-// Inline the Hero and Services components here
 const heroSlides = [
   {
     img: '/home-1.jpg',
