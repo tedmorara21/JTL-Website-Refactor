@@ -1,0 +1,133 @@
+/* Container centering */
+.self-care-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding-bottom: 1.5rem;
+
+  /* border: solid 1px #ff0000;  */
+}
+
+/* Welcome Card */
+.self-care-welcome-card {
+  background: #f4f6f8;
+  border-radius: 100px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 3rem 2.5rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 480px;
+  width: 100%;
+  transition: box-shadow 0.3s, transform 0.3s; 
+}
+
+.self-care-welcome-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+} 
+
+.self-care-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #23272a;
+
+  /* border: solid 1px #ff0000; */
+}
+
+.self-care-subtitle {
+  color: #6b6b6b;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.self-care-welcome-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.self-care-signup-btn {
+  background: #74aa50;
+  color: #fff;
+  border: none;
+  /* border-radius: 5px; */
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  min-width: 120px !important;
+  text-align: center !important;
+}
+
+.self-care-signup-btn:hover {
+  background: #74aa50;
+  transform: translateY(-5px);
+}
+
+.self-care-signin-btn {
+  background: #fff;
+  color: #23272a;
+  border: 1.5px solid #d1d5db;
+  border-radius: 5px; 
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  min-width: 120px !important;
+  text-align: center !important;
+}
+
+.self-care-signin-btn:hover {
+  border-color: #bdbdbd;
+  transform: translateY(-5px);
+  border-radius: 0;
+}
+
+.self-care-signup-btn:focus,
+.self-care-signin-btn:focus {
+  outline: 0.5px solid #bdbdbd;
+  outline-offset: 2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .self-care-welcome-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .self-care-welcome-card h1 {
+    font-size: 1.8rem;
+  }
+
+  .self-care-welcome-card p {
+    font-size: 1rem;
+  }
+
+  .self-care-welcome-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .self-care-signup-btn,
+  .self-care-signin-btn {
+    width: 100%;
+  }
+}

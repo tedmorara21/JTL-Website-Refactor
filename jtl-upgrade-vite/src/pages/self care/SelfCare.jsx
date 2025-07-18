@@ -13,8 +13,14 @@ export default function SelfCare() {
       <Header />
 
       <div className="self-care-container">
-        <h1>SELF CARE</h1>
-        <p>Manage your Faiba account, view usage, and access support through our Self Care portal.</p>
+        <div className="self-care-welcome-card">
+          <div className="self-care-welcome-actions">
+          <h1 className="self-care-title"> WELCOME </h1>
+          <p className="self-care-subtitle"> Manage your Faiba account, view usage, and access support through our Self Care portal. </p>
+            <button className="self-care-signup-btn">SIGN UP</button>
+            <button className="self-care-signin-btn">SIGN IN</button>
+          </div>
+        </div>
       </div>
 
       <AppDownload />
