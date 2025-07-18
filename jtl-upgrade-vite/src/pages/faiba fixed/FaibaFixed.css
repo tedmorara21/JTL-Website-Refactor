@@ -1,296 +1,161 @@
-/* Hero Banner */
-.faiba-fixed-hero {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  background: linear-gradient(90deg, #23272a 60%, #8dc63f 100%);
-  color: #fff;
-  padding: 2.5rem 0 2.5rem 0;
-  max-width: 1200px;
-  margin: 0 auto 2.5rem auto;
-  border-radius: 0 0 16px 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  gap: 2.5rem;
-  flex-wrap: wrap;
-}
-.faiba-fixed-hero-left {
-  flex: 1 1 320px;
-  min-width: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 2.5rem;
-}
-.faiba-fixed-new-badge {
-  background: #e53935;
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.1rem;
-  border-radius: 4px;
-  padding: 0.2rem 1.1rem;
-  margin-bottom: 1.2rem;
-  letter-spacing: 0.04em;
-  display: inline-block;
-}
-.faiba-fixed-title {
-  font-size: 2.7rem;
-  font-weight: 900;
-  margin: 0 0 0.7rem 0;
-  color: #fff;
-  letter-spacing: 0.01em;
-}
-.faiba-fixed-plus-badge {
-  background: #8dc63f;
-  color: #23272a;
-  font-weight: 800;
-  font-size: 1.2rem;
-  border-radius: 4px;
-  padding: 0.1rem 0.8rem;
-  margin-left: 0.5rem;
-}
-.faiba-fixed-promo-text {
-  background: #8dc63f;
-  color: #fff;
-  font-size: 1.08rem;
-  font-weight: 600;
-  border-radius: 4px;
-  padding: 0.7rem 1.2rem;
-  margin-top: 1.2rem;
-  margin-bottom: 0.7rem;
-  letter-spacing: 0.01em;
-}
-.faiba-fixed-hero-center {
-  flex: 1 1 220px;
-  min-width: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.faiba-fixed-mascot {
-  width: 100%;
-  max-width: 220px;
-  border-radius: 12px;
-  background: #f5f5f5;
-}
-.faiba-fixed-hero-right {
-  flex: 1 1 320px;
-  min-width: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 2.5rem;
-}
-.faiba-fixed-hero-green {
-  background: linear-gradient(135deg, #8dc63f 80%, #fff 100%);
-  color: #23272a;
-  border-radius: 12px;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
-  min-width: 220px;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-.faiba-fixed-hero-speed {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #23272a;
-  margin-bottom: 0.5rem;
-}
-.faiba-fixed-hero-speed span {
-  font-size: 2.2rem;
-  font-weight: 900;
-  color: #23272a;
-}
-.faiba-fixed-hero-price {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #23272a;
-  margin-bottom: 0.5rem;
-}
-.faiba-fixed-hero-price span {
-  font-size: 1.7rem;
-  font-weight: 900;
-  color: #23272a;
-}
-.faiba-fixed-hero-plus {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #23272a;
-  margin-bottom: 0.7rem;
-}
-.faiba-fixed-sim-img {
-  width: 100%;
-  max-width: 120px;
-  margin-bottom: 0.7rem;
-  border-radius: 8px;
-  background: #fff;
-}
-.faiba-fixed-hero-bundle-details {
-  font-size: 1.08rem;
-  color: #23272a;
-  font-weight: 600;
-  text-align: center;
-}
-
-/* Feature Bar */
-.faiba-fixed-feature-bar {
-  background: #23272a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.2rem;
-  padding: 1.1rem 0;
-  margin-bottom: 2.5rem;
-  flex-wrap: wrap;
-}
-.faiba-fixed-feature-btn {
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 4px;
-  padding: 0.4rem 1.2rem;
-  font-size: 1.08rem;
-  font-weight: 700;
-  background: transparent;
-  margin: 0.2rem 0;
-  transition: background 0.2s, color 0.2s;
-  cursor: pointer;
-  letter-spacing: 0.01em;
-}
-.faiba-fixed-feature-btn:hover {
-  background: #fff;
-  color: #23272a;
-}
-
 /* Tabs */
 .faiba-fixed-tabs {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2.2rem;
-  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  /* border: solid 2px red; */
 }
+
 .faiba-fixed-tab {
   background: none;
   border: none;
-  outline: none;
+  outline: none; 
   font-size: 1.18rem;
   font-weight: 700;
   color: #23272a;
-  padding: 0.7rem 2.2rem;
+  border-bottom: 3px solid #74aa50 !important;
   border-radius: 4px 4px 0 0;
+  padding: 0.7rem 2.2rem;
   cursor: pointer;
-  border-bottom: 3px solid transparent;
   transition: color 0.2s, border-bottom 0.2s, background 0.2s;
+  
+  /* border: solid 2px blue; */
 }
+
 .faiba-fixed-tab.active {
-  color: #8dc63f;
-  border-bottom: 3px solid #8dc63f;
+  color: #74aa50;
+  border: 3px solid #74aa50;
+  border-bottom: none !important;
+  background: #f7fafd;
+}
+
+.faiba-fixed-tab:hover {
+  color: #74aa50;
+  border-bottom: 3px solid #74aa50;
   background: #f7fafd;
 }
 
 /* Bundles Grid */
 .faiba-fixed-bundles-section {
-  background: #fff;
+  background: #f7fafd;
   padding: 2.5rem 0 3rem 0;
+
+  /* border: solid 2px blue; */
 }
+
 .faiba-fixed-bundles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10%, 30%));
   gap: 2.5rem;
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
 }
+
 .faiba-fixed-bundle-card {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   padding: 2.2rem 1.5rem 1.5rem 1.5rem;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
-  min-height: 320px;
-  border: 1.5px solid #e0e0e0;
+  position: relative;
+  border: 1px solid #e0e0e0;
   transition: box-shadow 0.2s;
+
+  /* border: solid 2px red; */
 }
-.faiba-fixed-bundle-header {
-  background: #f7fafd;
+
+.faiba-fixed-bundle-title {
+  font-size: 1.8rem;
+  font-weight: 100;
+  background: #74aa50;
   color: #23272a;
-  font-size: 2rem;
-  font-weight: 800;
-  width: 100%;
   text-align: center;
-  border-radius: 8px 8px 0 0;
-  padding: 1.2rem 0 1rem 0;
-  margin: -2.2rem -1.5rem 1.2rem -1.5rem;
-  border-bottom: 1.5px solid #e0e0e0;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  margin-bottom: 1rem;
+
+  /* border: solid 2px red; */
 }
-.faiba-fixed-bundle-price-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 0.7rem;
+
+.faiba-fixed-bundle-features {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #23272a;
+  white-space: pre-line; 
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  list-style-type: disc;
+  background: #f7fafd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+
+   /* border: solid 2px red;  */
 }
+
+.faiba-fixed-bundle-features li {
+  margin-bottom: 0.3rem;
+}
+
+.faiba-fixed-bundle-users {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #23272a;
+  white-space: pre-line; 
+  text-align: center;
+  padding-top: 0.5rem; 
+  padding-bottom: 0.5rem;
+
+   /* border: solid 2px red;  */
+}
+
 .faiba-fixed-bundle-price {
   font-size: 1.35rem;
   font-weight: 700;
   color: #23272a;
+  text-align: center;
+
+  /* border: solid 2px red; */
 }
-.faiba-fixed-bundle-period {
-  font-size: 1.1rem;
-  color: #8dc63f;
-  font-weight: 600;
+
+.faiba-fixed-bundle-btn-container {
+  align-items: center;
+  text-align: center; 
+  
+  /* border: solid 2px red; */ 
 }
-.faiba-fixed-bundle-features {
-  color: #23272a;
-  font-size: 1.08rem;
-  font-weight: 500;
-  margin: 0 0 1.2rem 0;
-  padding-left: 1.2rem;
-  width: 100%;
-}
-.faiba-fixed-bundle-features li {
-  margin-bottom: 0.3rem;
-}
+
 .faiba-fixed-bundle-btn {
-  background: #fff;
-  color: #8dc63f;
-  border: 2px solid #8dc63f;
-  border-radius: 4px;
-  font-size: 1.08rem;
+  background: transparent;
+  color: #74aa50;
+  border: 1px solid #74aa50;
+  border-radius: 2px;
+  font-size: 1rem;
   font-weight: 700;
   padding: 0.8rem 2.2rem;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
-  box-shadow: none;
-}
-.faiba-fixed-bundle-btn:hover {
-  background: #8dc63f;
-  color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
-@media (max-width: 900px) {
-  .faiba-fixed-hero {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .faiba-fixed-hero-left, .faiba-fixed-hero-right {
-    padding-left: 0;
-    padding-right: 0;
-    align-items: center;
-    justify-content: center;
-  }
-  .faiba-fixed-hero-green {
-    margin: 0 auto;
-  }
-  .faiba-fixed-bundles-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
+.faiba-fixed-bundle-btn:hover {
+  background: #74aa50;
+  color: #ffffff;
+  /* color: black; */
+}
+
+.faiba-fixed-konnect-speed {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #23272a;
+  text-align: center;
+  background: #f7fafd;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+   /* border: solid 2px red;  */
 }

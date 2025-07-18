@@ -3,8 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.2rem;
-  margin: 2.5rem 0 1.5rem 0;
+  gap: 2.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
   /* border: solid 2px red; */
 }
@@ -13,29 +14,28 @@
   background: none; 
   border: none;
   outline: none;
-  font-size: 1.1rem;
+  font-size: 1.18rem;
   font-weight: 700;
-  color: #74aa50; 
+  color: #23272a; 
+  border-bottom: 3px solid #74aa50 !important;
+  border-radius: 4px 4px 0 0;
   padding: 0.7rem 2.2rem;
   cursor: pointer; 
-  border-bottom: 3px solid #74aa50;
   transition: color 0.2s, border-bottom 0.2s, background 0.2s; 
 
   /* border: solid 2px red;   */
 }
 
 .faiba-mobile-tab.active {
-  color: #000000;
-  border-bottom: 3px solid #000000; 
-  border-left: 0.5px solid #000000;
-  border-right: 0.5px solid #000000;
-  border-top: 0.5px solid #000000;
-  
+  color: #74aa50;
+  border: 3px solid #74aa50;
+  border-bottom: none !important; 
   background: #f7fafd;
 }
 
 .faiba-mobile-tab:hover {
-  color: #000000;
+  color: #74aa50;
+  border-bottom: 3px solid #74aa50;
   background: #f7fafd;
 }
 
@@ -61,7 +61,7 @@
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
-  /* padding: 2rem 1.5rem;  */
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
   /* display: flex; */
   flex-direction: column;
   align-items: center;
@@ -76,12 +76,12 @@
 .faiba-mobile-bundle-title {
   font-size: 1.8rem;
   font-weight: 600;
+  background: #74aa50;
   color: #23272a;
-  /* margin-bottom: 0.5rem; */
   text-align: center; 
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  background: #74aa50;
+  /* margin-bottom: 0.5rem; */
 
   /* border: solid 2px red;  */
 }
@@ -92,12 +92,14 @@
 .faiba-mobile-bundle-sms,
 .faiba-mobile-bundle-data {
   font-size: 1rem;
+  font-weight: 400;
+  color: #23272a;
   /* text-align: center; */
   white-space: pre-line; 
   padding-top: 0.5rem;
   padding-bottom: 1rem; 
   padding-left: 15%;
-  font-weight: 400;
+  background: #f7fafd;
 
   /* border: solid 2px red;   */
 }
@@ -110,6 +112,7 @@
   font-weight: 1000;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  background: transparent;
 }
 
 .item-dot::before {
@@ -133,7 +136,6 @@
   align-items: center;
   text-align: center;
 
-  margin-bottom: 1rem;
   /* border: solid 2px red; */
 }
 
@@ -142,8 +144,8 @@
   color: #74aa50;
   border: 1px solid #74aa50;
   border-radius: 2px;
-  font-size: 1.08rem;
-  font-weight: 100;
+  font-size: 1rem;
+  font-weight: 700;
   padding: 0.8rem 2.2rem;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
@@ -152,10 +154,9 @@
 .faiba-mobile-bundle-btn:hover {
   background: #74aa50;
   color: #ffffff;
-  transition: font-size 0.1s;
-  font-size: 1.3rem;
+  /* transition: font-size 0.1s; */
+  /* font-size: 1.3rem; */
 }
-
 @media (max-width: 900px) {
   .faiba-mobile-hero-content {
     flex-direction: column;
@@ -175,25 +176,26 @@
   .faiba-mobile-carousel-image {
     max-height: 220px;
   }
-}
+} */
 
-/****************************************************/
 
+/* INFORMATION GRID */
 .faiba-mobile-info-section {
   padding: 2.5rem 1rem;
   background-color: #ffffff;
 
-  /* border: solid 2px red; */
+  border: solid 20px blue; 
 }
 
 .faiba-mobile-info-grid {
   max-width: 85%;
   margin: 0 auto; 
+  margin-bottom: 2rem;
   display: grid; 
   gap: 2rem;  
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-  /* border: solid 2px blue; */
+   /* border: solid 2px blue;   */
 }
 
 .faiba-mobile-info-card {
@@ -293,6 +295,7 @@
   background: #fff; 
   color: #333;
   transition: border-color 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
 .faiba-mobile-info-input {
