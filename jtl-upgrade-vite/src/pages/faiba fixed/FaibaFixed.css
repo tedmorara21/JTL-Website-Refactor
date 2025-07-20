@@ -22,15 +22,16 @@
   padding: 0.7rem 2.2rem;
   cursor: pointer;
   transition: color 0.2s, border-bottom 0.2s, background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
   
   /* border: solid 2px blue; */
 }
 
 .faiba-fixed-tab.active {
+  background: #f7fafd;
   color: #74aa50;
   border: 3px solid #74aa50;
   border-bottom: none !important;
-  background: #f7fafd;
 }
 
 .faiba-fixed-tab:hover {
