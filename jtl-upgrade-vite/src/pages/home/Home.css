@@ -1,4 +1,4 @@
-/* Hero styles */
+/* HERO STYLES */
 .hero-carousel {
   width: 100%;
   background: #fff;
@@ -94,7 +94,7 @@
   border: 2px solid #8dc63f;
 }
 
-/* Services styles */
+/* SERVICES STYLES */
 .services-row {
   display: flex;
   justify-content: space-between; 
@@ -138,11 +138,14 @@
   margin-bottom: 1.2rem;
 }
 
-.service-desc {
-  font-size: 1.15rem;
+.service-description {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 1.1rem;
   margin-bottom: 2.2rem;
-  font-weight: 400; 
+  font-weight: 300; 
   display: block;
+  line-height: 1.5;
+  color: white
 
   /* border: solid 2px red; */
 }
@@ -161,23 +164,19 @@
   cursor: pointer;
 }
 
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
 .btn-primary {
   background: #74aa50;
   color: #fff;
 }
 
-.btn-primary:hover {
-  background: #6fa32d;
-  color: #fff;
-}
-
 .btn-dark {
   background: #23272a;
-  color: #fff;
-}
-
-.btn-dark:hover {
-  background: #111;
   color: #fff;
 }
 
