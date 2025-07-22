@@ -1,10 +1,4 @@
-/* Tabs */
-.faiba-mobile-main-container {
-  /* background: #f7fafd; */
-
-  /* border: solid 12px red; */
-}
-
+/* TABS */
 .faiba-mobile-tabs {
   display: flex;
   justify-content: center;
@@ -47,7 +41,7 @@
   background: #f7fafd;
 }
 
-/* Bundles Grid */
+/* BUNDLES GRID */
 .faiba-mobile-bundles-section {
   background: #f7fafd;
   padding: 2.5rem 0 3rem 0;
