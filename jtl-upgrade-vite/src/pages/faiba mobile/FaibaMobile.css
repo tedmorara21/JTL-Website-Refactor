@@ -93,6 +93,7 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
   /* padding: 2.2rem 1.5rem 1.5rem 1.5rem; */
   padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   /* display: flex; */
   flex-direction: column;
   align-items: center;
@@ -194,7 +195,8 @@
 }
 
 /* BILAWAYA GRID */
-.bilawaya-grid {  
+.bilawaya-grid,
+.faiba-all-in-one-grid {  
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(40%, 40%)); /* 260px,1fr */ 
   grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
@@ -210,9 +212,12 @@
   justify-self: center; /* center horizontally */
 }
 
-.bilawaya-data {
-  /* padding-right: 10%; */
+.faiba-all-in-one-grid > *:nth-last-child(1):nth-child(odd) {
+  grid-column: 1 / -1; /* span all columns */
+  justify-self: center; /* center horizontally */
 }
+
+
 
 /* INFORMATION GRID */
 .faiba-mobile-info-section {
@@ -239,6 +244,7 @@
   border-radius: 3px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
 
   /* border: solid 2px blue;  */
 }

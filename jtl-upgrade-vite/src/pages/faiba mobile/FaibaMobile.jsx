@@ -149,7 +149,7 @@ function FaibaAllInOne( {setShowModal} ) {
   ];
 
   return (
-    <div className="faiba-mobile-bundles-grid">
+    <div className="faiba-all-in-one-grid">
           {faiba_all_in_one.map((faiba, idx) => (
             <div className={`faiba-mobile-bundle-card`} key={idx}>
               <div className="faiba-mobile-bundle-title"> {faiba.title} </div>
