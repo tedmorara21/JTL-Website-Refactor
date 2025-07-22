@@ -1,4 +1,10 @@
 /* Tabs */
+.faiba-mobile-main-container {
+  /* background: #f7fafd; */
+
+  /* border: solid 12px red; */
+}
+
 .faiba-mobile-tabs {
   display: flex;
   justify-content: center;
@@ -6,8 +12,9 @@
   gap: 2.2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-
-  /* border: solid 2px red; */
+  /* background: #f7fafd; */
+  
+  /* border: solid 2px red;  */
 }
 
 .faiba-mobile-tab {
@@ -24,7 +31,7 @@
   transition: color 0.2s, border-bottom 0.2s, background 0.2s; 
   box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
 
-  /* border: solid 2px red;   */
+  /* border: solid 2px red; */
 }
 
 .faiba-mobile-tab.active {
@@ -50,7 +57,8 @@
 
 .faiba-mobile-bundles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10%, 30%)); /* 260px,1fr */ 
+  /* grid-template-columns: repeat(auto-fit, minmax(10%, 30%)); /* 260px,1fr */ 
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: 80%;
   margin: 0 auto; 
@@ -58,11 +66,33 @@
   /* border: solid 2px red; */
 }
 
+/* ONE LEFTOVER ITEM*/
+.faiba-mobile-bundles-grid > *:nth-last-child(1):nth-child(3n+1) {
+  /* grid-column: 2 / 3; /* place in center column */
+  grid-column: 2 / span 1; /* middle column only */
+  justify-self: center; /* center within that column */
+  width: 120%; /* make it wider than normal, but not full row */
+  max-width: 150%; /* don’t overflow the grid cell */
+}
+
+/* TWO LEFTOVER ITEMS */
+.faiba-mobile-bundles-grid > *:nth-last-child(2):nth-child(3n+1),
+.faiba-mobile-bundles-grid > *:nth-last-child(1):nth-child(3n+2) {
+  grid-column: 2 / span 2; /* start in column 2, span 2 */
+}
+
+/* OPTIONALLY, CENTER SINGLE LEFTOVER FULLY */
+.faiba-mobile-bundles-grid > *:nth-last-child(1):nth-child(3n+1):only-child {
+  grid-column: 1 / -1; /* span all columns */
+  justify-self: center;
+}
+
 .faiba-mobile-bundle-card {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 2.5px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
-  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  /* padding: 2.2rem 1.5rem 1.5rem 1.5rem; */
+  padding-bottom: 1.5rem;
   /* display: flex; */
   flex-direction: column;
   align-items: center;
@@ -71,20 +101,21 @@
   border: 1px solid #d1d1d1; /* #e4e4e4 */
   transition: box-shadow 0.2s;
 
-  /* border: solid 2px red; */
+  /* border: solid 2px red;  */
 }
 
 .faiba-mobile-bundle-title {
   font-size: 1.8rem;
   font-weight: 600;
-  background: #74aa50;
+  background: #4f77a010;
   color: #23272a;
   text-align: center; 
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  /* margin-bottom: 0.5rem; */
+  transition: box-shadow 0.2s;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), inset 0 -2px 4px rgba(0,0,0,0.05); 
 
-  /* border: solid 2px red;  */
+  /* border: solid 2px red; */    
 }
 
 .faiba-mobile-bundle-validity,
@@ -100,7 +131,7 @@
   padding-top: 0.5rem;
   padding-bottom: 1rem; 
   padding-left: 15%;
-  background: #f7fafd;
+  /* background: #f7fafd;
 
   /* border: solid 2px red;   */
 }
@@ -150,6 +181,7 @@
   padding: 0.8rem 2.2rem;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  transition: transform 0.5s, box-shadow 0.2s;
 }
 
 .faiba-mobile-bundle-btn:hover {
@@ -157,35 +189,37 @@
   color: #ffffff;
   /* transition: font-size 0.1s; */
   /* font-size: 1.3rem; */
+  transform: translateY(-5px);
+  transition: transform 0.5s, box-shadow 0.2s;
 }
-@media (max-width: 900px) {
-  .faiba-mobile-hero-content {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-  }
-  .faiba-mobile-hero-img-wrap {
-    justify-content: center;
-  }
-  .faiba-mobile-bundles-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-  .faiba-mobile-carousel-container {
-    max-width: 100%;
-  }
-  .faiba-mobile-carousel-image {
-    max-height: 220px;
-  }
-} */
 
+/* BILAWAYA GRID */
+.bilawaya-grid {  
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(40%, 40%)); /* 260px,1fr */ 
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 2rem;
+  max-width: 80%;
+  margin: 0 auto; 
+  
+  /* border: solid 2px red; */
+}
+
+.bilawaya-grid > *:nth-last-child(1):nth-child(odd) {
+  grid-column: 1 / -1; /* span all columns */
+  justify-self: center; /* center horizontally */
+}
+
+.bilawaya-data {
+  padding-right: 10%;
+}
 
 /* INFORMATION GRID */
 .faiba-mobile-info-section {
   padding: 2.5rem 1rem;
   background-color: #ffffff;
 
-  border: solid 20px blue; 
+  /* border: solid 20px blue;  */
 }
 
 .faiba-mobile-info-grid {
@@ -204,6 +238,7 @@
   border: 1px solid #e4e4e4;
   border-radius: 3px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding-bottom: 1rem;
 
   /* border: solid 2px blue;  */
 }
@@ -216,8 +251,9 @@
   text-align: center;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), inset 0 -2px 4px rgba(0,0,0,0.05); 
 
-  /* border: solid 2px red;  */
+  /* border: solid 2px red;   */
 }
 
 .faiba-mobile-info-card p {
@@ -263,7 +299,7 @@
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 
-  /* border: solid 2px red; */
+  /* border: solid 2px red; */ 
 }
 
 .faiba-mobile-info-btn:hover {
@@ -271,6 +307,19 @@
   color: #ffffff;
   /* transition: font-size 0.1s; */
 }
+
+.view-terms-btn {
+  transition: transform 0.5s, box-shadow 0.2s;
+}
+
+.view-terms-btn:hover {
+  transform: translateY(-5px);
+  transition: transform 0.5s, box-shadow 0.2s;
+  font-weight: 700;
+
+  /* border: solid 1px red; */
+}
+
 
 .faiba-mobile-info-input-container {
   display: flex;
@@ -316,6 +365,17 @@
   border: 1px solid #000000;
 }
 
+.check-rate-btn {
+  transition: transform 0.5s, box-shadow 0.2s;
+}
+
+.check-rate-btn:hover {
+  transition: transform 0.5s, box-shadow 0.2s;
+  font-weight: 700;
+
+  /* border: solid 1px red; */
+}
+
 /* BUNDLES INNER TABS */
 .faiba-mobile-bundles-tabs {
   display: flex;
@@ -327,9 +387,9 @@
 
 .faiba-mobile-bundles-tab {
   background: #fff;
-  border: 1.5px solid #8dc63f;
+  border: 1.5px solid #74aa50;
   border-radius: 6px 6px 0 0;
-  color: #8dc63f;
+  color: #74aa50;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.6rem 1.8rem;
@@ -340,21 +400,57 @@
 
 .faiba-mobile-bundles-tab:hover {
   background: #f7fafd;
-  color: #23272a;
+  color: #23272ae8;
   border-color: #74aa50;
 }
 
 .faiba-mobile-bundles-tab.active {
-  background: #8dc63f;
+  background: #74aa50;
   color: #fff;
   border-bottom: 2.5px solid #fff;
   z-index: 1;
 }
 
 .correct {
-  color: #74aa50 !important;
+  color: #6ece2e !important;
 }
 
 .incorrect {
   color: #ff0000 !important;
 }
+
+@media (max-width: 900px) {
+  .faiba-mobile-hero-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .faiba-mobile-hero-img-wrap {
+    justify-content: center;
+  }
+  .faiba-mobile-bundles-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .faiba-mobile-carousel-container {
+    max-width: 100%;
+  }
+  .faiba-mobile-carousel-image {
+    max-height: 220px;
+  }
+  .faiba-mobile-bundles-grid {
+    grid-template-columns: 1fr; /* single column on mobile */
+  }
+  /* Remove centering rules for mobile */
+  .faiba-mobile-bundles-grid > * {
+    grid-column: auto !important;
+    justify-self: stretch;
+  }
+  .bilawaya-grid {
+    grid-template-columns: 1fr; /* stack to 1 column */
+  }
+  .bilawaya-grid > *:nth-last-child(1):nth-child(odd) {
+    grid-column: auto;
+    justify-self: stretch; /* no need to center, just fill */
+  }
+} 

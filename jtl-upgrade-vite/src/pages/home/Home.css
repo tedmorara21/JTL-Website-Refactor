@@ -145,7 +145,7 @@
   font-weight: 300; 
   display: block;
   line-height: 1.5;
-  color: white
+  color: white;
 
   /* border: solid 2px red; */
 }
@@ -162,6 +162,7 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
   border: none;
   cursor: pointer;
+  transition: transform 0.5s, box-shadow 0.2s;
 }
 
 .btn:hover {

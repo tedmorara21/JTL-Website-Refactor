@@ -107,7 +107,7 @@ const FaibaHomePlus = () => {
             </ul>
             <p className="faiba-fixed-bundle-price"> {bundle.price} </p>
             <div className="faiba-fixed-bundle-btn-container">
-              <button className="faiba-fixed-bundle-btn"> CONTACT US </button>
+              <button className="faiba-fixed-bundle-btn" onClick={() => window.location.href ='/pata-faiba'}> CONTACT US </button>
             </div>
           </div>
         ))}
@@ -173,7 +173,7 @@ const FaibaBusinessPlus = () => {
             <div className="faiba-fixed-bundle-users"> {bundle.users} </div>
             <p className="faiba-fixed-bundle-price"> {bundle.price} </p>
             <div className="faiba-fixed-bundle-btn-container">
-              <button className="faiba-fixed-bundle-btn"> CONTACT US </button>
+              <button className="faiba-fixed-bundle-btn" onClick={() => window.location.href ='/pata-faiba'}> CONTACT US </button>
             </div>
           </div>
         ))}
@@ -222,7 +222,7 @@ const Konnect = () => {
             <div className="faiba-fixed-bundle-title"> {bundle.title} </div>
             <p className="faiba-fixed-konnect-speed"> {bundle.speed} </p>
             <div className="faiba-fixed-bundle-btn-container">
-              <button className="faiba-fixed-bundle-btn"> CONTACT US </button>
+              <button className="faiba-fixed-bundle-btn" onClick={() => window.location.href ='/pata-faiba'}> CONTACT US </button>
             </div>
           </div>
         )) }

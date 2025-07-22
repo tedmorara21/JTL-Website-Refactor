@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 
+body {
+  overflow-x: hidden; 
+  /* overflow-x: auto; */
+  /* overflow-x: scroll; */
+  /* overflow-x: visible; */
+}
+
 
 /* Container */
 .header-container {
@@ -55,13 +62,17 @@
 .header-nav-container {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 100%; 
+  max-width: 1350px; /* limit total width */
+  margin: 0 auto; /* center within parent */
+  padding: 0 20px; /* some side spacing */
+  box-sizing: border-box; 
 }
 
 .header-left {
   display: flex;
   align-items: center;
-  padding: 0 30px;
+  /* padding: 0 30px; */
 }
 
 .header-logo-link {
@@ -80,8 +91,8 @@
   align-items: center;
   flex: 1 1 auto;
   justify-content: center;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; 
+  /* padding-left: 1.5rem;
+  padding-right: 1.5rem;  */
 
   /* border: solid 2px red; */
 }
@@ -118,6 +129,7 @@
   color: #8dc63f;
   background: #f5f5f5;
   border-bottom: solid 2px rgba(0, 0, 0, .6);
+  border-radius: 4px;
 }
 
 .header-links ul li a.active {
@@ -145,14 +157,17 @@
   font-size: 15px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
 }
+
 .faiba-shop-btn:hover {
-  background: #6fa32d;
+  /* background: #6fa32d; */
+  transform: scale(1.05); /* 👈 pop effect */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .shop-icon {

@@ -17,7 +17,8 @@
 .self-care-welcome-card {
   background: #f4f6f8;
   border-radius: 100px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.06); */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
   padding: 3rem 2.5rem;
   margin-top: 2rem;
   display: flex;
@@ -27,11 +28,6 @@
   width: 100%;
   transition: box-shadow 0.3s, transform 0.3s; 
 }
-
-.self-care-welcome-card:hover {
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-  transform: translateY(-2px);
-} 
 
 .self-care-title {
   font-size: 2rem;
@@ -82,7 +78,6 @@
   background: #fff;
   color: #23272a;
   border: 1.5px solid #d1d5db;
-  border-radius: 5px; 
   font-size: 1rem;
   font-weight: 700;
   padding: 0.7rem 2rem;
@@ -98,12 +93,6 @@
   border-color: #bdbdbd;
   transform: translateY(-5px);
   border-radius: 0;
-}
-
-.self-care-signup-btn:focus,
-.self-care-signin-btn:focus {
-  outline: 0.5px solid #bdbdbd;
-  outline-offset: 2px;
 }
 
 /* Mobile responsiveness */

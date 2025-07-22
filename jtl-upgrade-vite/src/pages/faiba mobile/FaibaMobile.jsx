@@ -175,15 +175,15 @@ function Bilawaya() {
 
   return (
     <section className="faiba-mobile-bundles-section">
-      <div className="faiba-mobile-bundles-grid">
+      <div className="bilawaya-grid">
           {bilawaya_plans.map((bilawaya_plan, idx) => (
             <div className={`faiba-mobile-bundle-card`} key={idx}>
               <div className="faiba-mobile-bundle-title">{bilawaya_plan.title}</div>
               <div className="faiba-mobile-bundle-validity item-dot"> {bilawaya_plan.validity} </div>
-              <div className="faiba-mobile-bundle-data item-dot"> {bilawaya_plan.data} </div>
+              <div className="faiba-mobile-bundle-data item-dot bilawaya-data"> {bilawaya_plan.data} </div>
               <div className="faiba-mobile-bundle-price"> {bilawaya_plan.price} </div>
               <div className="faiba-mobile-bundle-btn-container">
-                <button className="faiba-mobile-bundle-btn"> BUY NOW </button>
+                <button className="faiba-mobile-bundle-btn" onClick={() => window.location.href ='/pata-faiba'}> SUBSCRIBE NOW </button>
               </div>
             </div>
           ))}
@@ -196,13 +196,18 @@ function Information() {
   const [ codeInput, setCodeInput ] = useState('');
   const [ codeMessage, setCodeMessage ] = useState('');
 
-  const checkExtentionCode = () => {
+  const displayExtentionRate = () => {
     if ( codeInput.trim() === '' ) {
       setCodeMessage('Enter Extention Code');
+      setTimeout( () => setCodeMessage(''), 2000 );
+      return;
+    } else if ( codeInput === '254' ) {
+      setCodeMessage('Kenya = Ksh 50.00');
       setTimeout( () => setCodeMessage(''), 2000 );
     } else {
       setCodeMessage('Rate Unavailable');
       setTimeout(() => setCodeMessage(''), 2000);
+      return;
     }
   }
 
@@ -219,7 +224,7 @@ function Information() {
             <li> On-net calls & SMS <strong>FREE</strong> if on a valid bundle </li>
           </ul>
           <div className='faiba-mobile-info-btn-container'>
-            <button className="faiba-mobile-info-btn"> VIEW TERMS </button>
+            <button className="faiba-mobile-info-btn view-terms-btn" onClick={() => window.location.href ='/terms'}> VIEW TERMS </button>
           </div>
         </div>
 
@@ -242,9 +247,10 @@ function Information() {
             />
           </div>
           <div className='faiba-mobile-info-btn-container'>
-            <button className="faiba-mobile-info-btn" onClick={checkExtentionCode}> CHECK RATE </button>
+            <button className="faiba-mobile-info-btn check-rate-btn" onClick={displayExtentionRate}> CHECK RATE </button>
             { codeMessage === 'Enter Extention Code' && <p className='incorrect'> {codeMessage} </p> }
-            { codeMessage === 'Rate Unavailable' && <p className='correct'> {codeMessage} </p> }
+            { codeMessage === 'Rate Unavailable' && <p className='incorrect'> {codeMessage} </p> }
+            { codeMessage === 'Kenya = Ksh 50.00' && <p className='correct'> {codeMessage} </p> }
           </div>
         </div>
       </div>
@@ -260,21 +266,22 @@ export default function FaibaMobile() {
       <Header />
       <Hero />
 
-      <div className="faiba-mobile-tabs">
-        { ['Bundles', 'Bilawaya', 'Information'].map((tab, idx) => (
-          <button
-            key={idx}
-            className={`faiba-mobile-tab ${activeTab === tab ? 'active' : ''}`}
-            onClick={() => setActiveTab(tab)}
-          > {tab} </button>
-        )) }
+      <div className="faiba-mobile-main-container">
+        <div className="faiba-mobile-tabs">
+          { ['Bundles', 'Bilawaya', 'Information'].map((tab, idx) => (
+            <button
+              key={idx}
+              className={`faiba-mobile-tab ${activeTab === tab ? 'active' : ''}`}
+              onClick={() => setActiveTab(tab)}
+            > {tab} </button>
+          )) }
+        </div>
+
+        { activeTab === 'Bundles' && <Bundles /> }
+        { activeTab === 'Bilawaya' && <Bilawaya /> }
+        { activeTab === 'Information' && <Information /> }
       </div>
-
-      { activeTab === 'Bundles' && <Bundles /> }
-      { activeTab === 'Bilawaya' && <Bilawaya /> }
-      { activeTab === 'Information' && <Information /> }
       
-
       <AppDownload />
       <Footer />
     </>

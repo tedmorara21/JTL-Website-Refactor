@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+.terms-page {
+  font-family: 'Source Sans Pro', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.terms-header {
+  background: #23272a;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.terms-header h1 {
+  color: #8dc63f;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.terms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.terms-card {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.terms-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.terms-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #74aa50;
+}
+
+.terms-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #8dc63f;
+  border-radius: 4px;
+  background: #f9f9f9;
+  color: #23272a;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.2s, border 0.2s, transform 0.2s;
+}
+
+.terms-btn:hover {
+  background: #8dc63f;
+  color: #fff;
+  border-color: #74aa50;
+  transform: scale(1.05);
+}

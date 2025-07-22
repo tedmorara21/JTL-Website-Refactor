@@ -80,8 +80,8 @@ const dealers = [
 const shopLocationsRender = () => {
   return (
     <>
-      {/* Faiba Shops */}
-      <h2 className="locate-shop-title"> Faiba Shops </h2>
+      {/* FAIBA SHOPS */}
+      <h2 className="locate-shop-title"> FAIBA SHOPS </h2>
 
       <div className="locate-cards-grid">
         {faibaShops.map((shop, idx) => (
@@ -94,8 +94,8 @@ const shopLocationsRender = () => {
         ))}
       </div>
     
-      {/* Dealers */}
-      <h2 className="locate-shop-title"> Dealers </h2>
+      {/* DEALERS */}
+      <h2 className="locate-shop-title"> DEALERS </h2>
 
       <div className="locate-cards-grid">
         {dealers.map((dealer, idx) => (
