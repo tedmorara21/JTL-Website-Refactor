@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Header from '../../components/Header/Header';
 import AppDownload from '../../components/AppDownload/AppDownload';
 import Footer from '../../components/Footer/Footer';
+import FaibaModal from '../../components/Faiba Modal/FaibaModal';
 
 import './FaibaMobile.css';
 
@@ -46,7 +47,7 @@ function Hero() {
   );
 }
 
-function Bundles() {
+function Bundles( {setShowModal} ) {
   const [activeBundlesTab, setActiveBundlesTab] = useState('Data Plans');
 
   return (
@@ -63,15 +64,15 @@ function Bundles() {
         ))}
       </div>
 
-      { activeBundlesTab === 'Data Plans' && <DataPlans /> }
-      { activeBundlesTab === 'Gumzo Non-Stop (Calls only)' && <GumzoNonStop /> }
-      { activeBundlesTab === 'Faiba All In One (Calls, SMS, Data)' && <FaibaAllInOne /> }
+      { activeBundlesTab === 'Data Plans' && <DataPlans setShowModal = {setShowModal} /> }
+      { activeBundlesTab === 'Gumzo Non-Stop (Calls only)' && <GumzoNonStop setShowModal = {setShowModal} /> }
+      { activeBundlesTab === 'Faiba All In One (Calls, SMS, Data)' && <FaibaAllInOne setShowModal = {setShowModal} /> }
     </section>
   )
 }
 
 {/* BUNDLES SECTION */}
-function DataPlans() {
+function DataPlans( {setShowModal} ) {
    const data_plans = [
       { title: '225 MB', price: 'Ksh 20', validity: 'Valid for 1 Day',  },
       { title: '1 GB', price: 'Ksh 50', validity: 'Valid for 1 Day' },
@@ -100,7 +101,7 @@ function DataPlans() {
                 { data_plan.bonus && <div className="faiba-mobile-bundle-bonus"> {data_plan.bonus} </div> }
                 <div className="faiba-mobile-bundle-price"> {data_plan.price} </div>
                 <div className="faiba-mobile-bundle-btn-container">
-                  <button className="faiba-mobile-bundle-btn"> BUY NOW </button>
+                  <button className="faiba-mobile-bundle-btn" onClick={ () => setShowModal(true) }> BUY NOW </button>
                 </div>
               </div>
             ))}
@@ -109,7 +110,7 @@ function DataPlans() {
 }
 
 {/* BUNDLES SECTION */}
-function GumzoNonStop() {
+function GumzoNonStop( {setShowModal} ) {
   const gumzo_calls = [
     { title: '50 minutes', price: 'Ksh 50', validity: 'Valid for 1 Day\n', minutes: '50 minutes to Other Networks', bonus: 'Faiba to Faiba Calls' },
     { title: '100 minutes', price: 'Ksh 150', validity: 'Valid for 7 Days', minutes: '100 minutes to Other Networks', bonus: 'Faiba to Faiba Calls' },
@@ -130,7 +131,7 @@ function GumzoNonStop() {
               { gumzo_call.bonus && <div className="faiba-mobile-bundle-bonus"> {gumzo_call.bonus} </div> }
               <div className="faiba-mobile-bundle-price"> {gumzo_call.price} </div>
               <div className="faiba-mobile-bundle-btn-container">
-                <button className="faiba-mobile-bundle-btn">BUY NOW</button>
+                <button className="faiba-mobile-bundle-btn" onClick={ () => setShowModal(true) }>BUY NOW</button>
               </div>
             </div>
           ))}
@@ -139,7 +140,7 @@ function GumzoNonStop() {
 }
 
 {/* BUNDLES SECTION */}
-function FaibaAllInOne() {
+function FaibaAllInOne( {setShowModal} ) {
   const faiba_all_in_one = [
     { title: 'CHUI', price: 'Ksh 500', data: '5 GB Data', sms: '100 SMS', minutes: '300 minutes to other networks', validity: 'Valid for 30 Days' },
     { title: 'KIFARU', price: 'Ksh 700', data: '7 GB Data', sms: '100 SMS', minutes: '500 minutes to other networks', validity: 'Valid for 30 Days' },
@@ -159,7 +160,7 @@ function FaibaAllInOne() {
               <div className="faiba-mobile-bundle-bonus"> FREE Faiba to Faiba Calls </div>
               <div className="faiba-mobile-bundle-price"> {faiba.price} </div>
               <div className="faiba-mobile-bundle-btn-container">
-                <button className="faiba-mobile-bundle-btn"> BUY NOW </button>
+                <button className="faiba-mobile-bundle-btn" onClick={ () => setShowModal(true) }> BUY NOW </button>
               </div>
             </div>
           ))}
@@ -260,6 +261,11 @@ function Information() {
 
 export default function FaibaMobile() {
   const [activeTab, setActiveTab] = useState('Bundles');
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = showModal ? 'hidden' : 'auto';
+  }, [showModal]);
 
   return (
     <>
@@ -277,13 +283,16 @@ export default function FaibaMobile() {
           )) }
         </div>
 
-        { activeTab === 'Bundles' && <Bundles /> }
+        { activeTab === 'Bundles' && <Bundles setShowModal={setShowModal} /> }
         { activeTab === 'Bilawaya' && <Bilawaya /> }
         { activeTab === 'Information' && <Information /> }
       </div>
       
       <AppDownload />
       <Footer />
+
+      { showModal && <FaibaModal onClose={ () => setShowModal(false) } /> }
+
     </>
   );
 }
