@@ -100,6 +100,7 @@ body {
 .header-links {
   display: flex;
   align-items: center;
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 .header-links ul {
@@ -115,7 +116,7 @@ body {
   color: rgba(0, 0, 0, .6);
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 1rem;
   letter-spacing: 0.04em;
   padding: 0.2rem 0.7rem;
   border-radius: 0px;
@@ -126,18 +127,15 @@ body {
 }
 
 .header-links ul li a:hover {
-  color: #8dc63f;
+  color: #74aa50;
   background: #f5f5f5;
   /* border-bottom: solid 2px rgba(0, 0, 0, .6); */
   /* border-radius: 4px; */
 }
 
 .header-links ul li a.active {
-  color: #8dc63f;
+  color: #74aa50;
   background: #f5f5f5;
-  /*
-  border-right: solid 1px rgba(0, 0, 0, .6); 
-  border-left: solid 1px rgba(0, 0, 0, .6); */
   border-bottom: solid 2px rgba(0, 0, 0, .6);
 }
 
@@ -163,7 +161,6 @@ body {
   gap: 0.5rem;
   text-decoration: none;
 }
-
 .faiba-shop-btn:hover {
   /* background: #6fa32d; */
   transform: scale(1.05); /* 👈 pop effect */

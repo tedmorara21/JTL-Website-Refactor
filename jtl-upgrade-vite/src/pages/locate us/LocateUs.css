@@ -229,7 +229,7 @@
   margin-top: 2rem;
   align-items: start;
 
-  /* border: solid 1px blue;  */
+  border: solid 1px blue;  
 }
 
 .coverage-grid > *:nth-last-child(1):nth-child(odd) {
@@ -237,6 +237,11 @@
   justify-self: center; /* center horizontally */
   width: 120%; /* make it wider than normal, but not full row */
   max-width: 50%; /* don’t overflow the grid cell */
+}
+
+.bilawaya-grid > *:nth-last-child(1):nth-child(odd) {
+  grid-column: 1 / -1; /* span all columns */
+  justify-self: center; /* center horizontally */
 }
 
 .coverage-card {
@@ -281,10 +286,19 @@
   max-width: 90%;
   grid-template-columns: repeat(2, 1fr); /* 🔹 2 tabs per row */
   margin: 2rem auto; 
-  gap: 1rem;
+  gap: 3rem;
+  justify-items: center;
 
   /* border: solid 1px #ff0000; */
 }
+
+.coverage-accordion > *:nth-last-child(1):nth-child(odd) {
+  grid-column: 1 / -1; /* span all columns */
+  justify-self: center; /* center horizontally */
+  width: 120%; /* make it wider than normal, but not full row */
+  max-width: 50%; /* don’t overflow the grid cell */
+}
+
 
 .coverage-card {
   /* border: 1px solid #ccc; */
@@ -295,7 +309,7 @@
   margin-bottom: 2rem;
   overflow: hidden;
   align-self: center;
-  width: 90%;
+  width: 80%;
   align-self: start;
 
   /* border: solid 1px #ff0000; */
@@ -305,7 +319,8 @@
 .county-toggle {
   width: 100%;
   text-align: left;
-  background: #4f77a010;
+  /* background: #4f77a010; */
+  background: #74aa50b9;
   border: 1px solid #ccc;;
   padding-top: 1rem;
   padding-bottom: 1rem;

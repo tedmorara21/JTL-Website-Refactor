@@ -15,13 +15,19 @@
   .contact-link {
     color: #fff !important;
     text-decoration: none;
+    /* text-decoration: underline 2px #74aa50 !important; */
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    font-size: 14px;
+    font-size: 15px !important;
     font-weight: 500;
     transition: color 0.2s;
+
+    /* border: solid 1px #ff0000; */
   }
   .contact-link:hover {
     color: #8dc63f !important;
+    transform: scale(1.2);
+    transition: transform 0.2s;
+    /* text-decoration: underline 1px #74aa50 !important; */
   }

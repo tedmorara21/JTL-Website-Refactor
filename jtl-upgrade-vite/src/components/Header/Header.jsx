@@ -23,17 +23,17 @@ export default function Header() {
             <div className="header-right">
               <div className="header-links">
                 <ul>
-                  <li><NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink></li>
-                  <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About</NavLink></li>
-                  <li><NavLink to="/faiba-mobile" className={({ isActive }) => isActive ? 'active' : ''}>Faiba Mobile</NavLink></li>
-                  <li><NavLink to="/faiba-fixed" className={({ isActive }) => isActive ? 'active' : ''}>Faiba Fixed</NavLink></li>
-                  <li><NavLink to="/self-care" className={({ isActive }) => isActive ? 'active' : ''}>Self Care</NavLink></li>
-                  <li><NavLink to="/locate-us" className={({ isActive }) => isActive ? 'active' : ''}>Locate Us</NavLink></li>
+                  <li> <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}> Home </NavLink> </li>
+                  <li> <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}> About </NavLink> </li>
+                  <li> <NavLink to="/mobile" className={({ isActive }) => isActive ? 'active' : ''}> Faiba Mobile </NavLink> </li>
+                  <li> <NavLink to="/internet" className={({ isActive }) => isActive ? 'active' : ''}> Faiba Fixed </NavLink> </li>
+                  <li> <NavLink to="/self-care" className={({ isActive }) => isActive ? 'active' : ''}> Self Care </NavLink> </li>
+                  <li> <NavLink to="/locate-us" className={({ isActive }) => isActive ? 'active' : ''}> Locate Us </NavLink> </li>
                 </ul>
               </div>
 
               <div className="header-other-links">
-                <button className="faiba-shop-btn">
+                <button className="faiba-shop-btn" onClick={() => window.open('https://faibashop.com/en/', '_blank')}>
                   <span className="shop-icon">🛒</span>
                   <span>FAIBA SHOP</span>
                 </button>

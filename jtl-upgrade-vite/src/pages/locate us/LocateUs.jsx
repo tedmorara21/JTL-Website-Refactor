@@ -207,7 +207,7 @@ const coverageRender = ( {expandedRegion, setExpandedRegion, expandedCounty, set
 
             { expandedRegion === region && (
               <div className="county-list">
-                { Object.entries(counties).map(([county, subregions]) => (
+                { Object.entries(counties).map( ([county, subregions]) => (
                   <div key={county} className="county-item">
                     <button className="county-toggle" onClick={() => toggleCounty( region, county )}>
                       {county} <span> {expandedCounty[region] === county ? "−" : "+"} </span>

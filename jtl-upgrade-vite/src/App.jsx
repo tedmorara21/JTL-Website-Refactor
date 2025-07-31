@@ -17,8 +17,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/faiba-mobile" element={<FaibaMobile />} />
-        <Route path="/faiba-fixed" element={<FaibaFixed />} />
+        <Route path="/mobile" element={<FaibaMobile />} />
+        <Route path="/internet" element={<FaibaFixed />} />
         <Route path="/self-care" element={<SelfCare />} />
         <Route path="/locate-us" element={<LocateUs />} />
         <Route path="/pata-faiba" element={<PataFaiba />} />
